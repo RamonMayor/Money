@@ -52,9 +52,9 @@ describe('Money', () => {
     
     it("has a dictionary with currency ratios", () => {
 
-      const solution = Exchange.ratios["EUR"]["USD"]     
+      const solution = Exchange.ratios["EUR"]   
 
-      expect(solution).toBe(1.5)
+      expect(solution).toEqual(1.5)
 
     })
 
@@ -67,3 +67,13 @@ describe('Money', () => {
     }
   }
 })
+
+class Exchange{
+
+  static get ratios () {
+    return {
+      "EUR": 1.5
+    }
+  }
+
+}

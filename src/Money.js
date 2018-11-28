@@ -24,8 +24,9 @@ class Money {
     return new Money(this._amount * multiplier, this._currency)
   }
 
-  sum(){
-    return new Money(10, 'EUR')
+  sum(money){
+    const result = this._amount + money._amount
+    return new Money(result, 'EUR')
   }
 
   _sameAmountAs(money) {

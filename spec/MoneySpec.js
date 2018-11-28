@@ -47,6 +47,19 @@ describe('Money', () => {
     expect(tenEuros.sum(tenEuros).isEqual(twentyEuros)).toBe(true)
     expect(fiveEuros.sum(fiveEuros).isEqual(tenEuros)).toBe(true)
   })
+  
+  describe("Exchange" , () => {
+    
+    it("has a dictionary with currency ratios", () => {
+
+      const solution = Exchange.ratios["EUR"]["USD"]     
+
+      expect(solution).toBe(1.5)
+
+    })
+
+  })
+
 
   function moneyEquality (a, b) {
     if(a instanceof Money && b instanceof Money) {

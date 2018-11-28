@@ -42,7 +42,9 @@ describe('Money', () => {
   it("adds two amounts from the same currency", () => {
     const fiveEuros = Money.euro(5)
     const tenEuros = Money.euro(10)
+    const twentyEuros = Money.euro(20)
  
+    expect(tenEuros.sum(tenEuros).isEqual(twentyEuros)).toBe(true)
     expect(fiveEuros.sum(fiveEuros).isEqual(tenEuros)).toBe(true)
   })
 

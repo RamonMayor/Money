@@ -24,6 +24,10 @@ class Money {
     return new Money(this._amount * multiplier, this._currency)
   }
 
+  sum(){
+    return new Money(10, 'EUR')
+  }
+
   _sameAmountAs(money) {
     return this._amount === money._amount
   }

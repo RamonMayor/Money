@@ -43,7 +43,7 @@ describe('Money', () => {
     const fiveEuros = Money.euro(5)
     const tenEuros = Money.euro(10)
  
-    expect(FIVE.sum(FIVE).toEqual(tenEuros))
+    expect(fiveEuros.sum(fiveEuros).isEqual(tenEuros)).toBe(true)
   })
 
   function moneyEquality (a, b) {
